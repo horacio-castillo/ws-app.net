@@ -4,6 +4,7 @@ using wsApp.Application.Interfaces;
 using wsApp.Application.UseCases;
 using wsApp.Infrastructure.Persistence;
 using wsApp.Infrastructure.Repositories;
+using wsApp.Infrastructure.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     ));
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IHashService, HashService>();
 builder.Services.AddScoped<RegisterUserUseCase>();
 
 var app = builder.Build();
