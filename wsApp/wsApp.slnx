@@ -1,3 +1,13 @@
 <Solution>
-  <Project Path="wsApp.csproj" />
+  <Project Path="../wsApp.Application/wsApp.Application.csproj" Id="78546d4f-7539-4bb4-b549-cf8704cdf35e">
+    <BuildDependency Project="../wsApp.Domain/wsApp.Domain.csproj" />
+  </Project>
+  <Project Path="../wsApp.Domain/wsApp.Domain.csproj" Id="c4963c98-a072-4fed-9eaa-ff07db37e858" />
+  <Project Path="../wsApp.Infrastructure/wsApp.Infrastructure.csproj" Id="c59dfd9d-05c6-455b-9845-6aef981174d7">
+    <BuildDependency Project="../wsApp.Application/wsApp.Application.csproj" />
+  </Project>
+  <Project Path="wsApp.API.csproj">
+    <BuildDependency Project="../wsApp.Application/wsApp.Application.csproj" />
+    <BuildDependency Project="../wsApp.Infrastructure/wsApp.Infrastructure.csproj" />
+  </Project>
 </Solution>
