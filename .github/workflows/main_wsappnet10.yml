@@ -20,6 +20,14 @@ jobs:
           dotnet-version: '10.x'
       - name: Build with dotnet
         run: dotnet build ./wsApp/wsApp.API.csproj --configuration Release
+
+      - name: Run EF Migrations
+        run: |
+          dotnet tool install --global dotnet-ef
+          dotnet ef database update --project ./wsApp.Infrastructure/wsApp.Infrastructure.csproj --startup-project ./wsApp/wsApp.API.csproj
+        env:
+          ConnectionStrings__DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
+
       - name: dotnet publish
         run: dotnet publish ./wsApp/wsApp.API.csproj -c Release -o "${{env.DOTNET_ROOT}}/myapp"
       - name: Upload artifact for deployment job
