@@ -1,7 +1,8 @@
 # ws-app.net
 Arquitectura del Proyecto
 
-El proyecto sigue el patrón de Clean Architecture, separando responsabilidades en diferentes capas para lograr escalabilidad, mantenibilidad y bajo acoplamiento.
+El proyecto está basado en Clean Architecture, estructurado en capas: 
+presentación (API), aplicación (Application), dominio (Domain), infraestructura (Infrastructure) y pruebas automatizadas (Tests). Este enfoque garantiza una separación estricta de responsabilidades, bajo acoplamiento y alta cohesión. Además, la inclusión de un proyecto de pruebas permite validar la lógica de negocio y los componentes de forma aislada, mejorando la confiabilidad del sistema, facilitando el mantenimiento y promoviendo prácticas de desarrollo orientadas a calidad.
 
 ## Estructura de Proyectos
 
@@ -14,6 +15,8 @@ wsApp.Application       → Casos de uso / lógica de negocio
 wsApp.Domain            → Entidades y reglas del negocio
 
 wsApp.Infrastructure    → Acceso a datos y servicios externos
+
+wsApp.Tests             → Proyecto de tests automatizados Unit tests/Integration tests
 
 
 ## Relación entre capas
