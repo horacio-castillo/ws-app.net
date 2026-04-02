@@ -3,8 +3,7 @@ Arquitectura del Proyecto
 
 El proyecto sigue el patrón de Clean Architecture, separando responsabilidades en diferentes capas para lograr escalabilidad, mantenibilidad y bajo acoplamiento.
 
-
-Estructura de Proyectos
+## Estructura de Proyectos
 
 wsApp.sln 
 
@@ -17,7 +16,7 @@ wsApp.Domain            → Entidades y reglas del negocio
 wsApp.Infrastructure    → Acceso a datos y servicios externos
 
 
-Relación entre capas
+## Relación entre capas
 
 wsApp.API
    
@@ -25,7 +24,7 @@ wsApp.API
    
     wsApp.Infrastructure    → wsApp.Application
 
-Descripción de cada proyecto
+## Descripción de cada proyecto
 
 wsApp.API
 
@@ -53,7 +52,7 @@ wsApp.Infrastructure
     Repositorios  
     Servicios externos 
 
-Tecnologías
+## Tecnologías
 
     .NET 10
     Entity Framework Core
@@ -68,13 +67,11 @@ https://localhost:7280/swagger
 Scalar
 https://localhost:7280/scalar/v1
 
-Notas
+## Notas
 La conexión a base de datos se maneja mediante variables de entorno
 Se sigue el principio de inversión de dependencias
 
-# wsApp API
 
-API REST desarrollada con .NET 10, Entity Framework Core y JWT Authentication.
 
 ## 🚀 Demo en vivo
 

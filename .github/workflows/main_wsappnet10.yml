@@ -21,6 +21,9 @@ jobs:
       - name: Build with dotnet
         run: dotnet build ./wsApp/wsApp.API.csproj --configuration Release
 
+      - name: Run Tests
+        run: dotnet test ./wsApp.Tests/wsApp.Tests.csproj --no-build --verbosity normal
+        
       - name: Run EF Migrations
         run: |
           dotnet tool install --global dotnet-ef

@@ -6,6 +6,7 @@
   <Project Path="../wsApp.Infrastructure/wsApp.Infrastructure.csproj" Id="c59dfd9d-05c6-455b-9845-6aef981174d7">
     <BuildDependency Project="../wsApp.Application/wsApp.Application.csproj" />
   </Project>
+  <Project Path="../wsApp.Tests/wsApp.Tests.csproj" Id="806b89f6-f33d-4c11-858f-e24e9e0bfcbe" />
   <Project Path="wsApp.API.csproj">
     <BuildDependency Project="../wsApp.Application/wsApp.Application.csproj" />
     <BuildDependency Project="../wsApp.Infrastructure/wsApp.Infrastructure.csproj" />
