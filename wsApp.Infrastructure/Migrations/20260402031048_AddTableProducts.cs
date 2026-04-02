@@ -8,6 +8,7 @@ namespace wsApp.Infrastructure.Migrations
     /// <inheritdoc />
     public partial class AddTableProducts : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -26,6 +27,7 @@ namespace wsApp.Infrastructure.Migrations
                 });
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
