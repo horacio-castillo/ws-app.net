@@ -16,4 +16,8 @@
     <ProjectReference Include="..\wsApp.Application\wsApp.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
