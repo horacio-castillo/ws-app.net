@@ -71,3 +71,11 @@ https://localhost:7280/scalar/v1
 Notas
 La conexión a base de datos se maneja mediante variables de entorno
 Se sigue el principio de inversión de dependencias
+
+# wsApp API
+
+API REST desarrollada con .NET 10, Entity Framework Core y JWT Authentication.
+
+## 🚀 Demo en vivo
+
+📖 Documentación interactiva: https://wsappnet10-h4dwfyduh4dwg2gw.mexicocentral-01.azurewebsites.net/scalar/v1
