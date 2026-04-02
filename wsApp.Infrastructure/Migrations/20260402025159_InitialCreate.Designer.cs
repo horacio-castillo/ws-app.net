@@ -12,7 +12,7 @@ using wsApp.Infrastructure.Persistence;
 namespace wsApp.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260402024117_InitialCreate")]
+    [Migration("20260402025159_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
