@@ -70,7 +70,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
         policy => policy
-            .WithOrigins("http://localhost:4200")
+            .WithOrigins(
+                "http://localhost:4200",
+                "https://gray-wave-0ea61b210.2.azurestaticapps.net"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
