@@ -66,6 +66,15 @@ builder.Services.AddOpenApi(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular",
+        policy => policy
+            .WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 var app = builder.Build();
 
 //PRUEBA VALIDAR CONEXION
@@ -97,14 +106,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAngular",
-        policy => policy
-            .WithOrigins("http://localhost:4200")  
-            .AllowAnyHeader()
-            .AllowAnyMethod());
-});
+
 
 app.UseCors("AllowAngular");
  
