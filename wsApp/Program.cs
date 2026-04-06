@@ -106,6 +106,9 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod());
 });
 
+app.UseCors("AllowAngular");
+ 
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
