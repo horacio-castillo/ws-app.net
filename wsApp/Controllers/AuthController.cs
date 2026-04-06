@@ -22,7 +22,10 @@ namespace wsApp.Controllers
         public async Task<IActionResult> Register(RegisterUserDto dto)
         {
             await _register.Execute(dto);
-            return Ok("Usuario creado");
+            return Ok(new
+            {
+                message = "Usuario creado"
+            });
         }
 
         [HttpPost("login")]
